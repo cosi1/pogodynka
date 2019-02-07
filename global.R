@@ -1,3 +1,5 @@
+httr::set_config(httr::config(ssl_verifypeer = 0L))
+
 # Get Meteo.pl API key from a local file
 get_api_key = function(file = "api_key.txt") {
   readLines(con = file, warn = FALSE)
