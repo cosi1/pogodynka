@@ -66,7 +66,7 @@ function(input, output, session) {
   output$download = downloadHandler(
     filename = "meteo.png",
     content = function(file) {
-      file.rename(temp_file, file)
+      file.copy(temp_file, file, overwrite = TRUE)
     },
     contentType = "image/png"
   )
